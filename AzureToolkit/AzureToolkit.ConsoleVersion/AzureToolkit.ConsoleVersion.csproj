@@ -12,9 +12,11 @@
     <AssemblyTitle>AzureToolkit</AssemblyTitle>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
     <SignAssembly>False</SignAssembly>
+	  <VersionPrefix>0.1.0</VersionPrefix>
+	  <VersionSuffix>base</VersionSuffix>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
   </PropertyGroup>
 
