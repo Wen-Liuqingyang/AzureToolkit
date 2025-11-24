@@ -13,6 +13,15 @@ namespace AzureToolkit.ConsoleVersion
             else
             {
                 // Handle other commands
+                switch (args[0].ToLower())
+                {
+                    case "help" or "--help" or "-h":
+                        Print.ShowHelp();
+                        break;
+                    default:
+                        Console.WriteLine($"Unknown command: {args[0]}");
+                        break;
+                }
             }
         }
     }

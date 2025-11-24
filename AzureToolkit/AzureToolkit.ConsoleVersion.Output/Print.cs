@@ -12,8 +12,9 @@
         {
             Console.WriteLine("Usage: atk command [options]");
 
-            Console.WriteLine("Commands:");
-            Console.WriteLine("    help, --help, -h\tShow help information");
+            Console.WriteLine("Command:");
+            Console.WriteLine("    get-help, --help, -h      Get help information");
+            Console.WriteLine("    get-resources             List all Azure resources");
         }
     }
 }
