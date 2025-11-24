@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="AzureToolkit.ConsoleVersion.Output/AzureToolkit.ConsoleVersion.Output.csproj" Id="f4ff18c3-95fd-4270-8c50-37c2c4c8d59e" />
   <Project Path="AzureToolkit.ConsoleVersion/AzureToolkit.ConsoleVersion.csproj" />
 </Solution>
