@@ -31,6 +31,8 @@ internal class Program
                     "get-help" => GetHelp.Execute(args),
                     "get-version" => ShowVersion("0.1.0"),
                     "math-add" => MathAdd.Execute(args),
+                    "math-sub" => MathSub.Execute(args),
+                    "math-log" => MathLog.Execute(args),
                     "math-solve-equaltion" => MathSolveEqualtion.Execute(args),
                     _ => GetHelp.ShowCommandNotFound(args[0]),
                 };
