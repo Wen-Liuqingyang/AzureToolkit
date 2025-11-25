@@ -8,7 +8,9 @@ internal class Program
         //获取版本号
         static int ShowVersion(string ver)
         {
-            Output.WriteLineWithColor($"Azure Toolkit 版本: {ver}\n", ConsoleColor.Green);
+            Output.WriteLineWithColor($"-------------------------------", ConsoleColor.Green);
+            Output.WriteLineWithColor($"Azure Toolkit 版本: {ver}", ConsoleColor.Green);
+            Output.WriteLineWithColor($"-------------------------------\n", ConsoleColor.Green);
             return 0;
         }
 
