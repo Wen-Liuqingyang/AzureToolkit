@@ -1,15 +1,14 @@
 ﻿using AzureToolkit.Command.Get;
+using AzureToolkit.Command.Math;
 
 internal class Program
 {
     private static int Main(string[] args)
     {
-        GetHelp getHelp = new GetHelp();
-
         //没有参数时显示帮助信息
         if (args.Length == 0)
         {
-            getHelp.PrintHelpMessage();
+            GetHelp.PrintHelpMessage();
             return 0;
         }
         else
@@ -21,8 +20,10 @@ internal class Program
 
                 return cmd switch
                 {
-                    "get-help" => getHelp.Execute(args),
-                    _ => getHelp.PrintHelpMessage(),
+                    //命令在这里添加
+                    "get-help" => GetHelp.Execute(args),
+                    "math-add" => Add.Execute(args),
+                    _ => GetHelp.PrintHelpMessage(),
                 };
             }
             catch (Exception ex)

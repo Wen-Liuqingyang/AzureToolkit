@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AzureToolkit.Command.Math\AzureToolkit.Command.Math.csproj" />
     <ProjectReference Include="..\AzureToolkit.Interface\AzureToolkit.Interface.csproj" />
   </ItemGroup>
 
