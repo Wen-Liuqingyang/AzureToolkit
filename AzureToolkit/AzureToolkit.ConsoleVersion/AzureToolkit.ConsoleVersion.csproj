@@ -12,8 +12,8 @@
     <AssemblyTitle>AzureToolkit</AssemblyTitle>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
     <SignAssembly>False</SignAssembly>
-	  <VersionPrefix>0.1.0</VersionPrefix>
-	  <VersionSuffix>base</VersionSuffix>
+	  <VersionPrefix>0.2.0</VersionPrefix>
+	  <VersionSuffix>release</VersionSuffix>
   </PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
