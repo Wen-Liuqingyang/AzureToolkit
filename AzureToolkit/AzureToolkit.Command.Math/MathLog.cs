@@ -8,10 +8,12 @@ namespace AzureToolkit.Command.Math
         public static int PrintHelpMessage()
         {
             Console.WriteLine("对数运算命令\n");
-            Console.WriteLine("用法: math-log [<option> <base>] <num1>\n");
+            Console.WriteLine("用法: math-log [option] [base] [natural]\n");
             Console.WriteLine("选项:");
             Console.WriteLine("  -b, --base  指定对数的底数（默认为自然对数）");
-            Console.WriteLine("<num1>  要计算对数的数字");
+            Console.WriteLine("参数:");
+            Console.WriteLine("[base]       对数的底数");
+            Console.WriteLine("[natural]    对数的真数");
             return 0;
         }
 
