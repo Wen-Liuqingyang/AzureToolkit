@@ -1,4 +1,5 @@
 # Azure Tookit
+[![license](https://img.shields.io/github/license/CeuiLiSA/Pixiv-Shaft)](https://github.com/CeuiLiSA/Pixiv-Shaft/blob/master/LICENSE)
 > 这是我拿来练手的第一个开源项目~希望您可以留下宝贵的建议！😊
 
 ## 运行环境
@@ -22,26 +23,26 @@
 
 ### 第二步 解压
 下载好压缩包后，解压到自己喜欢的位置
-![解压](Docs\Images\image.png)
+![解压](Docs/Images/image.png)
 ### 第三步 配置环境变量
 首先复制 `.exe` 文件所在的路径：
-![复制路径](Docs\Images\image1.png)
+![复制路径](Docs/Images/image1.png)
 
 然后，打开设置 > 系统 > 系统信息 > 高级系统设置
-![设置](Docs\Images\image2.png)
+![设置](Docs/Images/image2.png)
 
 找到环境变量
-![环境变量](Docs\Images\image3.png)
+![环境变量](Docs/Images/image3.png)
 
 在 `系统变量` 中，找到 `path` 变量并点击 `编辑`
-![找到 path 变量](Docs\Images\image4.png)
+![找到 path 变量](Docs/Images/image4.png)
 
 点击 `新建`
-![新建 path 变量](Docs\Images\image5.png)
+![新建 path 变量](Docs/Images/image5.png)
 
 输入[第三步](#第三步-配置环境变量)一开始复制的路径后，点击 `确定` 关闭窗口即可
-![保存 path 变量](Docs\Images\image6.png)
+![保存 path 变量](Docs/Images/image6.png)
 
 ### 最后一步，打开终端，运行！
 输入 `atk get-help` 试试看吧~
-![运行！！！](Docs\Images\image-finally.png)
+![运行！！！](Docs/Images/image-finally.png)
