@@ -3,7 +3,7 @@ using AzureToolkit.Share;
 
 namespace AzureToolkit.Command.Math
 {
-    public class MathSolveEqualtion : ICommand
+    public class MathSolveEquation : ICommand
     {
         public static int Execute(string[] args)
         {
