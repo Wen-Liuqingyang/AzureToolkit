@@ -1,7 +1,8 @@
 {
   "profiles": {
     "AzureToolkit.ConsoleVersion": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "commandLineArgs": "math-log --base-e e"
     }
   }
 }

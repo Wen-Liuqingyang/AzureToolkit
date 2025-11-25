@@ -36,7 +36,11 @@ namespace AzureToolkit.Command.Math
             }
             else if (args[1] == "--base-e")
             {
-                if (TryParseArguments(args, out double num1))
+                if (args.Length == 3 && args[2] == "e")
+                {
+                    Console.WriteLine($"计算的结果是: 1");
+                }
+                else if (TryParseArguments(args, out double num1))
                 {
                     Console.WriteLine($"计算的结果是: {System.Math.Log(num1)}");
                 }
@@ -69,18 +73,6 @@ namespace AzureToolkit.Command.Math
                 PrintHelpMessage();
                 return false;
             }
-            if (!double.TryParse(args[1], out num1))
-            {
-                Output.WriteLineWithColor($"错误：无法将 '{args[1]}' 解析为数字。", ConsoleColor.Red);
-                Output.WriteLineWithColor("再好好看看啊喂！", ConsoleColor.Red);
-                return false;
-            }
-            if (!double.TryParse(args[2], out num2))
-            {
-                Output.WriteLineWithColor($"错误：无法将 '{args[2]}' 解析为数字。", ConsoleColor.Red);
-                Output.WriteLineWithColor("再好好看看啊喂！", ConsoleColor.Red);
-                return false;
-            }
             if (num1 <= 0 || num1 == 1)
             {
                 Output.WriteLineWithColor("错误：对数的底数必须大于0且不等于1。", ConsoleColor.Red);
@@ -93,6 +85,19 @@ namespace AzureToolkit.Command.Math
                 Output.WriteLineWithColor("连对数定义都不知道，果然是杂鱼呢~", ConsoleColor.Red);
                 return false;
             }
+            if (!double.TryParse(args[2], out num1))
+            {
+                Output.WriteLineWithColor($"错误：无法将 '{args[1]}' 解析为数字。", ConsoleColor.Red);
+                Output.WriteLineWithColor("再好好看看啊喂！", ConsoleColor.Red);
+                return false;
+            }
+            if (!double.TryParse(args[3], out num2))
+            {
+                Output.WriteLineWithColor($"错误：无法将 '{args[2]}' 解析为数字。", ConsoleColor.Red);
+                Output.WriteLineWithColor("再好好看看啊喂！", ConsoleColor.Red);
+                return false;
+            }
+
             return true;
         }
 
@@ -113,18 +118,19 @@ namespace AzureToolkit.Command.Math
                 PrintHelpMessage();
                 return false;
             }
-            if (!double.TryParse(args[2], out num1))
-            {
-                Output.WriteLineWithColor($"错误：无法将 '{args[2]}' 解析为数字。", ConsoleColor.Red);
-                Output.WriteLineWithColor("再好好看看啊喂！", ConsoleColor.Red);
-                return false;
-            }
             if (num1 <= 0)
             {
                 Output.WriteLineWithColor("错误：对数的真数数必须大于0。", ConsoleColor.Red);
                 Output.WriteLineWithColor("连对数定义都不知道，果然是杂鱼呢~", ConsoleColor.Red);
                 return false;
             }
+            if (!double.TryParse(args[2], out num1))
+            {
+                Output.WriteLineWithColor($"错误：无法将 '{args[2]}' 解析为数字。", ConsoleColor.Red);
+                Output.WriteLineWithColor("再好好看看啊喂！", ConsoleColor.Red);
+                return false;
+            }
+
             return true;
         }
     }
