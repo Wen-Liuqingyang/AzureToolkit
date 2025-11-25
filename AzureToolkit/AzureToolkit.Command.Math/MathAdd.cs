@@ -7,8 +7,12 @@ namespace AzureToolkit.Command.Math
     {
         public static int PrintHelpMessage()
         {
+            Console.WriteLine("\n描述:");
             Console.WriteLine("加法运算命令\n");
-            Console.WriteLine("用法: math-add <num1> <num2>");
+            Console.WriteLine("用法: math-add [num1]<double> [num2]<double>");
+            Console.WriteLine("参数:");
+            Console.WriteLine("  [num1]<double>   第一个加数");
+            Console.WriteLine("  [num2]<double>   第二个加数\n");
             return 0;
         }
 
