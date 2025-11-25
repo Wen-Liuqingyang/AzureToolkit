@@ -1,12 +1,13 @@
-﻿using AzureToolkit.ConsoleVersion.Output;
+﻿
 
 internal class Program
 {
     private static int Main(string[] args)
     {
+        //没有参数时显示帮助信息
         if (args.Length == 0)
         {
-            Print.ShowHelp();
+
             return 0;
         }
         else
@@ -18,8 +19,8 @@ internal class Program
 
                 return cmd switch
                 {
-                    "help" or "-h" or "--help" => Print.ShowHelp(),
-                    _ => Print.ShowHelp(),
+                    "help" or "-h" or "--help" => GetHelp.ShowHelp(),
+                    _ => GetHelp.ShowHelp(),
                 };
             }
             catch (Exception ex)

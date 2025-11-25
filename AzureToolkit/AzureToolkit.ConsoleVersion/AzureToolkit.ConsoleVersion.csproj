@@ -7,7 +7,7 @@
     <Nullable>enable</Nullable>
     <PublishAot>true</PublishAot>
     <InvariantGlobalization>true</InvariantGlobalization>
-    <StartupObject>AzureToolkit.ConsoleVersion.Program</StartupObject>
+    <StartupObject>Program</StartupObject>
     <AssemblyName>atk</AssemblyName>
     <AssemblyTitle>AzureToolkit</AssemblyTitle>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
@@ -23,9 +23,5 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\AzureToolkit.ConsoleVersion.Output\AzureToolkit.ConsoleVersion.Output.csproj" />
-  </ItemGroup>
 
 </Project>
