@@ -18,6 +18,7 @@ namespace AzureToolkit.Command.Get
             Output.WriteLineWithColor("  get-version   Get           获取本程序版本信息", ConsoleColor.White);
             Output.WriteLineWithColor("  \n--M--", ConsoleColor.Green);
             Output.WriteLineWithColor("  math-add      Math          执行加法运算", ConsoleColor.White);
+            Output.WriteLineWithColor("  math-sub      Math          执行减法运算", ConsoleColor.White);
             return 0;
         }
 
@@ -41,7 +42,8 @@ namespace AzureToolkit.Command.Get
             return commandName switch
             {
                 "get-help" => PrintHelpMessage(),
-                "math-add" => Add.PrintHelpMessage(),
+                "math-add" => MathAdd.PrintHelpMessage(),
+                "math-sub" => MathSub.PrintHelpMessage(),
                 "" => PrintHelpMessage(), // 没有指定具体命令时显示通用帮助
                 _ => ShowCommandNotFound(commandName)
             };

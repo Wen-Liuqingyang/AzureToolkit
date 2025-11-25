@@ -2,7 +2,7 @@
   "profiles": {
     "AzureToolkit.ConsoleVersion": {
       "commandName": "Project",
-      "commandLineArgs": "math-add"
+      "commandLineArgs": "math-sub"
     }
   }
 }

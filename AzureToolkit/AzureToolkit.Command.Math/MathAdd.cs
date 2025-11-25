@@ -3,7 +3,7 @@ using AzureToolkit.Share;
 
 namespace AzureToolkit.Command.Math
 {
-    public class Add : ICommand
+    public class MathAdd : ICommand
     {
         public static int PrintHelpMessage()
         {
