@@ -3,4 +3,5 @@
   <Project Path="AzureToolkit.Command.Math/AzureToolkit.Command.Math.csproj" Id="11615455-d0b6-4e16-9d9f-2871ee301202" />
   <Project Path="AzureToolkit.ConsoleVersion/AzureToolkit.ConsoleVersion.csproj" />
   <Project Path="AzureToolkit.Interface/AzureToolkit.Interface.csproj" Id="51810e89-521c-4641-9f02-2149f7d6c1f5" />
+  <Project Path="AzureToolkit.Share/AzureToolkit.Share.csproj" Id="b36e0ea0-ff8c-4c4d-8d73-1d2dc49289f0" />
 </Solution>
