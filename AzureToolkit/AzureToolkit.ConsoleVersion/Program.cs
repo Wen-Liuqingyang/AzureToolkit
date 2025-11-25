@@ -30,8 +30,9 @@ internal class Program
                     //命令在这里添加
                     "get-help" => GetHelp.Execute(args),
                     "get-version" => ShowVersion("0.1.0"),
-                    "math-add" => Add.Execute(args),
-                    _ => GetHelp.PrintHelpMessage(),
+                    "math-add" => MathAdd.Execute(args),
+                    "math-solve-equaltion" => MathSolveEqualtion.Execute(args),
+                    _ => GetHelp.ShowCommandNotFound(args[0]),
                 };
             }
             catch (Exception ex)

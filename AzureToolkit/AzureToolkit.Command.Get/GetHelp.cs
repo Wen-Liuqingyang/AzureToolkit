@@ -10,14 +10,16 @@ namespace AzureToolkit.Command.Get
         {
             Console.WriteLine("用法:");
             Console.WriteLine($"get-help <command>\n");
+            Console.WriteLine("注释: Azure Toolkit中的所有命令均是 \"类别-命令名\" 的形式\n");
             Output.WriteLineWithColor("Azure Toolkit 所有命令:", ConsoleColor.Green);
-            Output.WriteLineWithColor("  命令          类别           描述", ConsoleColor.Green);
+            Output.WriteLineWithColor("  命令                 类别           描述", ConsoleColor.Green);
             Output.WriteLineWithColor("  --------------------------------------------------------", ConsoleColor.Green);
             Output.WriteLineWithColor("  \n--G--", ConsoleColor.Green);
-            Output.WriteLineWithColor("  get-help      Get           获取命令帮助信息", ConsoleColor.White);
-            Output.WriteLineWithColor("  get-version   Get           获取本程序版本信息", ConsoleColor.White);
+            Output.WriteLineWithColor("  get-help             Get           获取命令帮助信息", ConsoleColor.White);
+            Output.WriteLineWithColor("  get-version          Get           获取本程序版本信息", ConsoleColor.White);
             Output.WriteLineWithColor("  \n--M--", ConsoleColor.Green);
-            Output.WriteLineWithColor("  math-add      Math          执行加法运算", ConsoleColor.White);
+            Output.WriteLineWithColor("  math-add             Math          执行加法运算", ConsoleColor.White);
+            Output.WriteLineWithColor("  math-solve-equation  Math          求解数学方程", ConsoleColor.White);
             return 0;
         }
 
@@ -41,14 +43,15 @@ namespace AzureToolkit.Command.Get
             return commandName switch
             {
                 "get-help" => PrintHelpMessage(),
-                "math-add" => Add.PrintHelpMessage(),
+                "math-add" => MathAdd.PrintHelpMessage(),
+                "math-solve-equation" => MathSolveEqualtion.PrintHelpMessage(),
                 "" => PrintHelpMessage(), // 没有指定具体命令时显示通用帮助
                 _ => ShowCommandNotFound(commandName)
             };
 
         }
 
-        private static int ShowCommandNotFound(string commandName)
+        public static int ShowCommandNotFound(string commandName)
         {
             Output.WriteLineWithColor($"错误：未找到命令 '{commandName}' 的帮助信息", ConsoleColor.Red);
             Output.WriteLineWithColor("使用 'get-help' 查看可用命令列表", ConsoleColor.Red);

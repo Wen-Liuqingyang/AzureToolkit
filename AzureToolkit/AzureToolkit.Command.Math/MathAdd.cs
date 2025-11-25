@@ -3,12 +3,13 @@ using AzureToolkit.Share;
 
 namespace AzureToolkit.Command.Math
 {
-    public class Add : ICommand
+    public class MathAdd : ICommand
     {
         public static int PrintHelpMessage()
         {
+            Console.WriteLine("\n描述:");
             Console.WriteLine("加法运算命令\n");
-            Console.WriteLine("用法: math-add <num1> <num2>");
+            Console.WriteLine("用法: \nmath-add [num1]<double> [num2]<double>");
             return 0;
         }
 
@@ -17,7 +18,7 @@ namespace AzureToolkit.Command.Math
             // 检查参数数量
             if (TryParseArguments(args, out double num1, out double num2))
             {
-                Console.WriteLine($"计算的结果是: {num1 + num2}");
+                Output.WriteLineWithColor($"结果是: {num1 + num2}", ConsoleColor.White);
             }
 
             return 0;

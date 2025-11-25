@@ -2,7 +2,7 @@
   "profiles": {
     "AzureToolkit.ConsoleVersion": {
       "commandName": "Project",
-      "commandLineArgs": "math-add"
+      "commandLineArgs": "math-solve-equaltion --degree-1 0 2"
     }
   }
 }
