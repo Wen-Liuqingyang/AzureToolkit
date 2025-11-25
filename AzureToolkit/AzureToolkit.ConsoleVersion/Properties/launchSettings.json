@@ -1,8 +1,7 @@
 {
   "profiles": {
     "AzureToolkit.ConsoleVersion": {
-      "commandName": "Project",
-      "commandLineArgs": "math-add"
+      "commandName": "Project"
     }
   }
 }

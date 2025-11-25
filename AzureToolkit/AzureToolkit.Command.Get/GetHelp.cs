@@ -6,6 +6,12 @@ namespace AzureToolkit.Command.Get
 {
     public class GetHelp : ICommand
     {
+        public static int NoCommandError()
+        {
+            Output.WriteLineWithColor("错误：不存在该命令，更多命令正在开发中，敬请期待", ConsoleColor.Red);
+            Output.WriteLineWithColor("使用 'get-help' 查看可用命令列表", ConsoleColor.Red);
+            return 0;
+        }
         public static int PrintHelpMessage()
         {
             Console.WriteLine("用法:");
@@ -18,6 +24,7 @@ namespace AzureToolkit.Command.Get
             Output.WriteLineWithColor("  get-version   Get           获取本程序版本信息", ConsoleColor.White);
             Output.WriteLineWithColor("  \n--M--", ConsoleColor.Green);
             Output.WriteLineWithColor("  math-add      Math          执行加法运算", ConsoleColor.White);
+            Output.WriteLineWithColor("  math-log      Math          执行对数运算", ConsoleColor.White);
             return 0;
         }
 
@@ -42,6 +49,7 @@ namespace AzureToolkit.Command.Get
             {
                 "get-help" => PrintHelpMessage(),
                 "math-add" => MathAdd.PrintHelpMessage(),
+                "math-log" => MathLog.PrintHelpMessage(),
                 "" => PrintHelpMessage(), // 没有指定具体命令时显示通用帮助
                 _ => ShowCommandNotFound(commandName)
             };

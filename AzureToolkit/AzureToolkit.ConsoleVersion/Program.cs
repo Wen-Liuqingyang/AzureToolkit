@@ -31,7 +31,8 @@ internal class Program
                     "get-help" => GetHelp.Execute(args),
                     "get-version" => ShowVersion("0.1.0"),
                     "math-add" => MathAdd.Execute(args),
-                    _ => GetHelp.PrintHelpMessage(),
+                    "math-log" => MathLog.Execute(args),
+                    _ => GetHelp.NoCommandError(),
                 };
             }
             catch (Exception ex)
