@@ -3,12 +3,15 @@ using AzureToolkit.Share;
 
 namespace AzureToolkit.Command.Math
 {
-    public class Add : ICommand
+    internal class MathLog : ICommand
     {
         public static int PrintHelpMessage()
         {
-            Console.WriteLine("加法运算命令\n");
-            Console.WriteLine("用法: math-add <num1> <num2>");
+            Console.WriteLine("对数运算命令\n");
+            Console.WriteLine("用法: math-log [<option> <base>] <num1>\n");
+            Console.WriteLine("选项:");
+            Console.WriteLine("  -b, --base  指定对数的底数（默认为自然对数）");
+            Console.WriteLine("<num1>  要计算对数的数字");
             return 0;
         }
 

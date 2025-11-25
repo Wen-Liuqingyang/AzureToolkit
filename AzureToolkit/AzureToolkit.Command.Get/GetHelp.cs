@@ -41,7 +41,7 @@ namespace AzureToolkit.Command.Get
             return commandName switch
             {
                 "get-help" => PrintHelpMessage(),
-                "math-add" => Add.PrintHelpMessage(),
+                "math-add" => MathAdd.PrintHelpMessage(),
                 "" => PrintHelpMessage(), // 没有指定具体命令时显示通用帮助
                 _ => ShowCommandNotFound(commandName)
             };
