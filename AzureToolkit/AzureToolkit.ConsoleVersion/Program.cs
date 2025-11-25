@@ -29,6 +29,7 @@ internal class Program
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine("杂鱼~");
                 return 1;
             }
         }

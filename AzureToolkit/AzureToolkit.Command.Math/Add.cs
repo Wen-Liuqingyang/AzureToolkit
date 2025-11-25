@@ -14,8 +14,10 @@ namespace AzureToolkit.Command.Math
         public static int Execute(string[] args)
         {
             // 检查参数数量
-
-            TryParseArguments(args, out double num1, out double num2);
+            if (TryParseArguments(args, out double num1, out double num2))
+            {
+                Console.WriteLine($"计算的结果是: {num1 + num2}");
+            }
 
             return 0;
         }
