@@ -1,10 +1,17 @@
 ﻿using AzureToolkit.Command.Get;
 using AzureToolkit.Command.Math;
-
+using AzureToolkit.Share;
 internal class Program
 {
     private static int Main(string[] args)
     {
+        //获取版本号
+        static int ShowVersion(string ver)
+        {
+            Output.WriteLineWithColor($"Azure Toolkit 版本: {ver}\n", ConsoleColor.Green);
+            return 0;
+        }
+
         //没有参数时显示帮助信息
         if (args.Length == 0)
         {
@@ -22,14 +29,15 @@ internal class Program
                 {
                     //命令在这里添加
                     "get-help" => GetHelp.Execute(args),
+                    "get-version" => ShowVersion("0.1.0"),
                     "math-add" => Add.Execute(args),
                     _ => GetHelp.PrintHelpMessage(),
                 };
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
-                Console.WriteLine("杂鱼~");
+                Output.WriteLineWithColor($"Error: {ex.Message}", ConsoleColor.Red);
+                Output.WriteLineWithColor("杂鱼~", ConsoleColor.Red);
                 return 1;
             }
         }

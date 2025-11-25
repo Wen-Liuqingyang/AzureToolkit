@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AzureToolkit.Interface\AzureToolkit.Interface.csproj" />
+    <ProjectReference Include="..\AzureToolkit.Share\AzureToolkit.Share.csproj" />
   </ItemGroup>
 
 </Project>

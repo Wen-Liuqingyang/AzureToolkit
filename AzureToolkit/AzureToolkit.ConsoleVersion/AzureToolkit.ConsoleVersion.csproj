@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AzureToolkit.Command.Get\AzureToolkit.Command.Get.csproj" />
+    <ProjectReference Include="..\AzureToolkit.Share\AzureToolkit.Share.csproj" />
   </ItemGroup>
 
 </Project>

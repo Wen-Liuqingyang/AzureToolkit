@@ -1,4 +1,5 @@
 ﻿using AzureToolkit.Interface;
+using AzureToolkit.Share;
 
 namespace AzureToolkit.Command.Math
 {
@@ -36,21 +37,21 @@ namespace AzureToolkit.Command.Math
 
             if (args.Length != 3)
             {
-                Console.WriteLine("错误：参数数量不正确。");
-                Console.WriteLine("杂鱼~杂鱼~连数数都不会~\n看看下面的用法吧:\n");
+                Output.WriteLineWithColor("错误：参数数量不正确。", ConsoleColor.Red);
+                Output.WriteLineWithColor("杂鱼~杂鱼~连数数都不会~\n看看下面的用法吧:\n", ConsoleColor.Red);
                 PrintHelpMessage();
                 return false;
             }
             if (!double.TryParse(args[1], out num1))
             {
-                Console.WriteLine($"错误：无法将 '{args[1]}' 解析为数字。");
-                Console.WriteLine("再好好看看啊喂！");
+                Output.WriteLineWithColor($"错误：无法将 '{args[1]}' 解析为数字。", ConsoleColor.Red);
+                Output.WriteLineWithColor("再好好看看啊喂！", ConsoleColor.Red);
                 return false;
             }
             if (!double.TryParse(args[2], out num2))
             {
-                Console.WriteLine($"错误：无法将 '{args[2]}' 解析为数字。");
-                Console.WriteLine("再好好看看啊喂！");
+                Output.WriteLineWithColor($"错误：无法将 '{args[2]}' 解析为数字。", ConsoleColor.Red);
+                Output.WriteLineWithColor("再好好看看啊喂！", ConsoleColor.Red);
                 return false;
             }
             return true;
