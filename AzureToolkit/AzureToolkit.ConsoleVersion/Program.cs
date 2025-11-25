@@ -1,27 +1,31 @@
 ﻿using AzureToolkit.ConsoleVersion.Output;
 
-namespace AzureToolkit.ConsoleVersion
+internal class Program
 {
-    internal class Program
+    private static int Main(string[] args)
     {
-        static void Main(string[] args)
+        if (args.Length == 0)
         {
-            if (args.Length == 0)
+            Print.ShowHelp();
+            return 0;
+        }
+        else
+        {
+            try
             {
-                Print.ShowHelp();
-            }
-            else
-            {
-                // Handle other commands
-                switch (args[0].ToLower())
+                //解析命令行参数
+                string cmd = args[0].ToLower();
+
+                return cmd switch
                 {
-                    case "help" or "--help" or "-h":
-                        Print.ShowHelp();
-                        break;
-                    default:
-                        Console.WriteLine($"Unknown command: {args[0]}");
-                        break;
-                }
+                    "help" or "-h" or "--help" => Print.ShowHelp(),
+                    _ => Print.ShowHelp(),
+                };
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return 1;
             }
         }
     }
