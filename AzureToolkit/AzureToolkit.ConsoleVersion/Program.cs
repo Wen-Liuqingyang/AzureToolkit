@@ -34,7 +34,7 @@ internal class Program
                     "math-sub" => MathSub.Execute(args),
                     "math-log" => MathLog.Execute(args),
                     "math-solve-equaltion" => MathSolveEqualtion.Execute(args),
-                    _ => GetHelp.ShowCommandNotFound(args[0]),
+                    _ => GetHelp.NoCommandError(),
                 };
             }
             catch (Exception ex)
