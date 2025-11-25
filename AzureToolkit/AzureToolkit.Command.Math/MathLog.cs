@@ -20,14 +20,21 @@ namespace AzureToolkit.Command.Math
 
         public static int Execute(string[] args)
         {
-            if (args[2] == "--base")
+            if (args.Length == 1)
+            {
+                Output.WriteLineWithColor("错误：缺少必要的选项与参数。", ConsoleColor.Red);
+                Output.WriteLineWithColor("看看下面的用法吧:\n", ConsoleColor.Red);
+                PrintHelpMessage();
+                return 1;
+            }
+            if (args[1] == "--base")
             {
                 if (TryParseArguments(args, out double num1, out double num2))
                 {
                     Console.WriteLine($"计算的结果是: {System.Math.Log(num2, num1)}");
                 }
             }
-            else if (args[2] == "--base-e")
+            else if (args[1] == "--base-e")
             {
                 if (TryParseArguments(args, out double num1))
                 {
@@ -106,9 +113,9 @@ namespace AzureToolkit.Command.Math
                 PrintHelpMessage();
                 return false;
             }
-            if (!double.TryParse(args[1], out num1))
+            if (!double.TryParse(args[2], out num1))
             {
-                Output.WriteLineWithColor($"错误：无法将 '{args[1]}' 解析为数字。", ConsoleColor.Red);
+                Output.WriteLineWithColor($"错误：无法将 '{args[2]}' 解析为数字。", ConsoleColor.Red);
                 Output.WriteLineWithColor("再好好看看啊喂！", ConsoleColor.Red);
                 return false;
             }
