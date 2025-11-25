@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AzureToolkit.ConsoleVersion": {
+      "commandName": "Project",
+      "commandLineArgs": "get-help a"
+    }
+  }
+}
