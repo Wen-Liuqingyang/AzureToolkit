@@ -161,7 +161,7 @@ namespace AzureToolkit.Command.Math
             Console.WriteLine("\n描述:");
             Console.WriteLine("求解给定的数学方程。(目前只支持一次、二次方程)\n");
             Console.WriteLine("用法:");
-            Console.WriteLine("math-solve-equaltion [option] [arg1]<double> [arg2]<double> ...\n");
+            Console.WriteLine("math-solve-equation [option] [arg1]<double> [arg2]<double> ...\n");
             Console.WriteLine("选项:");
             Console.WriteLine("  --degree-1         指定方程的最高次数为1次");
             Console.WriteLine("  --degree-2         指定方程的最高次数为2次\n");

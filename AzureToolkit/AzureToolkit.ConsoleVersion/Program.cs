@@ -31,11 +31,11 @@ internal class Program
                 {
                     //命令在这里添加
                     "get-help" => GetHelp.Execute(args),
-                    "get-version" => ShowVersion("v0.2.0"),
+                    "get-version" => ShowVersion("v0.2.1"),
                     "math-add" => MathAdd.Execute(args),
                     "math-sub" => MathSub.Execute(args),
                     "math-log" => MathLog.Execute(args),
-                    "math-solve-equaltion" => MathSolveEqualtion.Execute(args),
+                    "math-solve-equation" => MathSolveEquation.Execute(args),
                     _ => GetHelp.NoCommandError(),
                 };
             }

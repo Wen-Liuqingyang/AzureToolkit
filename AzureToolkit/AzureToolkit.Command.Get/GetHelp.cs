@@ -54,7 +54,7 @@ namespace AzureToolkit.Command.Get
                 "math-add" => MathAdd.PrintHelpMessage(),
                 "math-log" => MathLog.PrintHelpMessage(),
                 "math-sub" => MathSub.PrintHelpMessage(),
-                "math-solve-equation" => MathSolveEqualtion.PrintHelpMessage(),
+                "math-solve-equation" => MathSolveEquation.PrintHelpMessage(),
                 "" => PrintHelpMessage(), // 没有指定具体命令时显示通用帮助
                 _ => ShowCommandNotFound(commandName)
             };
