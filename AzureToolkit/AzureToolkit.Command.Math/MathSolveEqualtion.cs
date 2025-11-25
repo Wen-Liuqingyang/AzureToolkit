@@ -55,6 +55,12 @@ namespace AzureToolkit.Command.Math
                 PrintHelpMessage();
                 return false;
             }
+            if (k == 0)
+            {
+                Output.WriteLineWithColor("错误：方程的最高次系数不能为零。", ConsoleColor.Red);
+                Output.WriteLineWithColor("杂鱼~杂鱼~连一次函数一次项系数不能为零都不知道，杂鱼！重修初中数学吧~", ConsoleColor.Red);
+                return false;
+            }
             if (!double.TryParse(args[2], out k))
             {
                 Output.WriteLineWithColor($"错误：无法将 '{args[1]}' 解析为数字。", ConsoleColor.Red);
@@ -65,12 +71,6 @@ namespace AzureToolkit.Command.Math
             {
                 Output.WriteLineWithColor($"错误：无法将 '{args[2]}' 解析为数字。", ConsoleColor.Red);
                 Output.WriteLineWithColor("再好好看看啊喂！", ConsoleColor.Red);
-                return false;
-            }
-            if (k == 0)
-            {
-                Output.WriteLineWithColor("错误：方程的最高次系数不能为零。", ConsoleColor.Red);
-                Output.WriteLineWithColor("杂鱼~杂鱼~连一次函数一次项系数不能为零都不知道，杂鱼！重修初中数学吧~", ConsoleColor.Red);
                 return false;
             }
 
