@@ -128,6 +128,7 @@ namespace AzureToolkit.Command.Math
             Console.WriteLine("选项:");
             Console.WriteLine("  --degree-1         指定方程的最高次数为1次");
             Console.WriteLine("  --degree-2         指定方程的最高次数为2次\n");
+            Console.WriteLine("参数:");
             Console.WriteLine("  [arg]<double>   方程的系数\n");
             Output.WriteLineWithColor("注意:", ConsoleColor.Green);
             Output.WriteLineWithColor("系数是方程化为一般式后的数字", ConsoleColor.Green);
