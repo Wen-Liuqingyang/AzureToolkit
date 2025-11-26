@@ -73,18 +73,7 @@ namespace AzureToolkit.Command.Math
                 PrintHelpMessage();
                 return false;
             }
-            if (num1 <= 0 || num1 == 1)
-            {
-                Output.WriteLineWithColor("错误：对数的底数必须大于0且不等于1。", ConsoleColor.Red);
-                Output.WriteLineWithColor("连对数定义都不知道，果然是杂鱼呢~", ConsoleColor.Red);
-                return false;
-            }
-            if (num2 <= 0)
-            {
-                Output.WriteLineWithColor("错误：对数的真数必须大于0。", ConsoleColor.Red);
-                Output.WriteLineWithColor("连对数定义都不知道，果然是杂鱼呢~", ConsoleColor.Red);
-                return false;
-            }
+
             if (!double.TryParse(args[2], out num1))
             {
                 Output.WriteLineWithColor($"错误：无法将 '{args[1]}' 解析为数字。", ConsoleColor.Red);
@@ -95,6 +84,18 @@ namespace AzureToolkit.Command.Math
             {
                 Output.WriteLineWithColor($"错误：无法将 '{args[2]}' 解析为数字。", ConsoleColor.Red);
                 Output.WriteLineWithColor("再好好看看啊喂！", ConsoleColor.Red);
+                return false;
+            }
+            if (num1 <= 0 || num1 == 1)
+            {
+                Output.WriteLineWithColor("错误：对数的底数必须大于0且不等于1。", ConsoleColor.Red);
+                Output.WriteLineWithColor("连对数定义都不知道，果然是杂鱼呢~", ConsoleColor.Red);
+                return false;
+            }
+            if (num2 <= 0)
+            {
+                Output.WriteLineWithColor("错误：对数的真数必须大于0。", ConsoleColor.Red);
+                Output.WriteLineWithColor("连对数定义都不知道，果然是杂鱼呢~", ConsoleColor.Red);
                 return false;
             }
 
@@ -118,16 +119,18 @@ namespace AzureToolkit.Command.Math
                 PrintHelpMessage();
                 return false;
             }
-            if (num1 <= 0)
-            {
-                Output.WriteLineWithColor("错误：对数的真数数必须大于0。", ConsoleColor.Red);
-                Output.WriteLineWithColor("连对数定义都不知道，果然是杂鱼呢~", ConsoleColor.Red);
-                return false;
-            }
+
             if (!double.TryParse(args[2], out num1))
             {
                 Output.WriteLineWithColor($"错误：无法将 '{args[2]}' 解析为数字。", ConsoleColor.Red);
                 Output.WriteLineWithColor("再好好看看啊喂！", ConsoleColor.Red);
+                return false;
+            }
+
+            if (num1 <= 0)
+            {
+                Output.WriteLineWithColor("错误：对数的真数数必须大于0。", ConsoleColor.Red);
+                Output.WriteLineWithColor("连对数定义都不知道，果然是杂鱼呢~", ConsoleColor.Red);
                 return false;
             }
 
