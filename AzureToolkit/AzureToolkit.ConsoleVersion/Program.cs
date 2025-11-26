@@ -31,7 +31,7 @@ internal class Program
                 {
                     //命令在这里添加
                     "get-help" => GetHelp.Execute(args),
-                    "get-version" => ShowVersion("v0.2.1"),
+                    "get-version" => ShowVersion("v0.2.2"),
                     "math-add" => MathAdd.Execute(args),
                     "math-sub" => MathSub.Execute(args),
                     "math-log" => MathLog.Execute(args),
