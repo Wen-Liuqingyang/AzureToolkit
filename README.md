@@ -19,7 +19,7 @@
 > 所有命令以及开发相关请看 Wiki 页面
 
 ###  第一步 下载压缩包
-点击右侧 Releases 即可找到最新版本
+[点击下载最新版本](https://github.com/Wen-Liuqingyang/AzureToolkit/releases)
 
 ### 第二步 解压
 下载好压缩包后，解压到自己喜欢的位置
